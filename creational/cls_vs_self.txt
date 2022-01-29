@@ -1,0 +1,13 @@
+According to PEP 8: 
+Function and method arguments:
+
+Always use self for the first argument to instance methods.
+
+Always use cls for the first argument to class methods.
+
+The main difference beetwen cls and self is that
+cls refers to the class, 
+whereas self refers to the instance. 
+Using the cls keyword, we can only access the members of the class, 
+whereas using the self keyword, we can access both the instance variables and the class attributes. 
+With cls, we cannot access the instance variables in a class
