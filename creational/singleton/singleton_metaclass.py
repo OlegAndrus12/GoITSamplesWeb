@@ -22,6 +22,7 @@ class DatabaseConnector(metaclass=SingletonMeta):
     def add_record(self):
         pass
 
+
 if __name__ == "__main__":
     # The client code.
 

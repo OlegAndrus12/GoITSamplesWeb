@@ -17,4 +17,3 @@ if __name__ == "__main__":
         print("Singleton works, both variables contain the same instance.")
     else:
         print("Singleton failed, variables contain different instances.")
-    
