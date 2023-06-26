@@ -1,3 +1,5 @@
+import time
+
 class SingletonMeta(type):
     """
     The Singleton class can be implemented in different ways in Python. Some
@@ -25,7 +27,7 @@ class DatabaseConnector(metaclass=SingletonMeta):
 
 if __name__ == "__main__":
     # The client code.
-
+    start = time.perf_counter()
     s1 = DatabaseConnector()
     s2 = DatabaseConnector()
 
@@ -33,3 +35,5 @@ if __name__ == "__main__":
         print("Singleton works, both variables contain the same instance.")
     else:
         print("Singleton failed, variables contain different instances.")
+    end = time.perf_counter()
+    print(int(round(end-start)))

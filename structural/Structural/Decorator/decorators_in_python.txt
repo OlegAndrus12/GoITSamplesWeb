@@ -1,0 +1,20 @@
+@staticmethod: Decorator used to define a static method inside a class. Static methods are bound to the class and do not have access to the instance of the class.
+
+@classmethod: Decorator used to define a class method inside a class. Class methods take the class itself as the first argument instead of the instance.
+
+@property: Decorator used to define a method as a property. Properties allow you to access a method like an attribute without invoking it explicitly.
+
+@abstractmethod: Decorator used to define an abstract method inside an abstract base class. Subclasses are required to implement this method.
+
+@login_required: Decorator from Django's authentication framework. It ensures that a user must be authenticated before accessing a specific view or resource.
+
+@cache_page: Decorator from Django's caching framework. It caches the output of a view for a specific duration, reducing the need to recompute the same data on subsequent requests.
+
+@csrf_exempt: Decorator from Django's security framework. It exempts a view from the Cross-Site Request Forgery (CSRF) protection, allowing requests without a valid CSRF token.
+
+@transaction.atomic: Decorator from Django's database transactions. It wraps a function or a view in a database transaction, ensuring atomicity and consistency of the database operations.
+
+@require_http_methods: Decorator from Django that restricts the accepted HTTP methods for a view. It allows you to specify the allowed methods like @require_http_methods(['GET', 'POST']).
+
+@ratelimit(key='user', rate='5/m', method=['POST']): Decorator from Django Ratelimit package. It limits the rate of requests from a particular source (e.g., user, IP address) to prevent abuse or excessive usage.
+
