@@ -1,0 +1,8 @@
+https://realpython.com/async-io-python/
+https://superfastpython.com/asyncio-vs-threading/#Comparison_of_Asyncio_vs_Threading
+https://superfastpython.com/asyncio-async-for/
+https://docs.python.org/3/library/asyncio-task.html
+https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-event-loop
+https://peps.python.org/pep-0525/#asynchronous-generators
+https://superfastpython.com/asyncio-task/
+https://docs.python.org/3/library/asyncio-future.html

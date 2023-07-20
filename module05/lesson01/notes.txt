@@ -1,0 +1,13 @@
+A Task is a Future
+Future is the more general concept of a container of an async result, akin to a JavaScript promise. 
+Task is a subclass of future specialized for executing coroutines.
+
+As described in the previous article each event loop contains a number of tasks, 
+and every coroutine that is executing is doing so inside a task
+
+The method create_task takes a coroutine object as a parameter and returns a 
+Task object, which inherits from asyncio.Future. The call creates the task inside
+the event loop for the current thread, and starts the task executing at the beginning
+of the coroutine’s code-block.
+
+Therefore a Task is a coroutine, but a coroutine is not a task
