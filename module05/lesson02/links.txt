@@ -1,0 +1,4 @@
+https://github.com/aio-libs/aiohttp-demos/tree/master/demos
+https://docs.aiohttp.org/en/v3.8.4/client_quickstart.html
+https://ably.com/blog/websockets-vs-long-polling
+https://ably.com/topic/long-polling
