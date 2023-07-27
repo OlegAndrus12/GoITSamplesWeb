@@ -1,0 +1,7 @@
+https://www.w3schools.com/sql/default.asp
+https://www.sql-practice.com/
+https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial
+https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D1%96%D1%8F_%D0%BC%D0%BD%D0%BE%D0%B6%D0%B8%D0%BD
+https://explainextended.com/2009/07/12/double-thinking-in-sql/
+https://towardsdatascience.com/whats-behind-a-simple-sql-query-c78e3ded8321
+https://dev.to/gbengelebs/unboxing-a-database-how-databases-work-internally-155h
