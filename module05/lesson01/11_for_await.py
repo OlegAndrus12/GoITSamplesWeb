@@ -11,7 +11,12 @@ fake = Faker()
 
 async def get_user_async(uuid: int) -> dict:
     await asyncio.sleep(0.5)
-    return {'id': uuid, 'name': fake.name(), 'company': fake.company(), 'email': fake.email()}
+    return {
+        "id": uuid,
+        "name": fake.name(),
+        "company": fake.company(),
+        "email": fake.email(),
+    }
 
 
 async def get_users(uuids: List[int]) -> list[Coroutine[Any, dict, Any]]:
@@ -26,8 +31,7 @@ async def main(users: Coroutine[Any, list[Coroutine[Any, Any, dict]], Any]):
     return await asyncio.gather(*result)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     uuids = [1, 2, 3]
     r = asyncio.run(main(get_users(uuids)))
     print(r)
-

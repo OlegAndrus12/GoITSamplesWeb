@@ -11,7 +11,14 @@ fake = Faker()
 
 async def get_user_async(uid: int, future: Future) -> None:
     await asyncio.sleep(0.5)
-    future.set_result({'id': uid, 'name': fake.name(), 'company': fake.company(), 'email': fake.email()})
+    future.set_result(
+        {
+            "id": uid,
+            "name": fake.name(),
+            "company": fake.company(),
+            "email": fake.email(),
+        }
+    )
 
 
 def make_request(uuid: int) -> Future:
@@ -32,6 +39,6 @@ async def main():
     return r
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     r = asyncio.run(main())
     print(r)

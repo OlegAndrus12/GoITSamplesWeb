@@ -8,8 +8,17 @@ from requests.exceptions import MissingSchema, RequestException
 
 from libs import async_timed
 
-urls = ['http://www.google.com', 'http://www.python.org', 'http://duckduckgo.com', 'http://www.google.com',
-        'http://www.python.org', 'http://duckduckgo.com', 'http://www.google.com', 'http://www.python.org/fake', 'ttt']
+urls = [
+    "http://www.google.com",
+    "http://www.python.org",
+    "http://duckduckgo.com",
+    "http://www.google.com",
+    "http://www.python.org",
+    "http://duckduckgo.com",
+    "http://www.google.com",
+    "http://www.python.org/fake",
+    "ttt",
+]
 
 
 def get_url(url: str) -> (str, str):  # blocking IO operation
@@ -26,7 +35,7 @@ async def get_url_async():
         print(r)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(get_url_async())
 
     start = time()

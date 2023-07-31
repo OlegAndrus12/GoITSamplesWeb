@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 
 def io_operation():
-    with open(__file__, 'r') as f:
+    with open(__file__, "r") as f:
         return f.read(100)
 
 
@@ -32,5 +32,5 @@ async def main():
         print(r)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())

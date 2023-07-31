@@ -16,9 +16,9 @@ async def main():
         await asyncio.Future()  # run forever
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     try:
         asyncio.run(main())
     except KeyboardInterrupt as err:
-        print('Stop server')
+        print("Stop server")

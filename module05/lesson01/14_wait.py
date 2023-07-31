@@ -4,7 +4,11 @@ from concurrent.futures import ProcessPoolExecutor
 from time import time
 from random import random
 
-urls = ['http://www.google.com', 'http://www.python.org', 'http://duckduckgo.com']  # , 'http://test'
+urls = [
+    "http://www.google.com",
+    "http://www.python.org",
+    "http://duckduckgo.com",
+]  # , 'http://test'
 
 
 def preview_fetch(url):
@@ -19,9 +23,11 @@ async def preview_fetch_async():
 
     with ProcessPoolExecutor(2) as pool:
         futures = [loop.run_in_executor(pool, preview_fetch, url) for url in urls]
-        done, pending = await asyncio.wait(futures, return_when=asyncio.FIRST_COMPLETED)  # , return_when=asyncio.FIRST_COMPLETED
-        print('Done: ', done)
-        print('Pending: ', pending)
+        done, pending = await asyncio.wait(
+            futures, return_when=asyncio.FIRST_COMPLETED
+        )  # , return_when=asyncio.FIRST_COMPLETED
+        print("Done: ", done)
+        print("Pending: ", pending)
 
         [el.cancel() for el in pending]
 
@@ -35,7 +41,7 @@ async def preview_fetch_async():
         return r
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     start = time()
     r = asyncio.run(preview_fetch_async())
     print(r)

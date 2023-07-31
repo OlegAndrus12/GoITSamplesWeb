@@ -12,5 +12,5 @@ async def consumer(hostname: str, port: int):
             logging.info(f"Message: {message}")
 
 
-if __name__ == '__main__':
-    asyncio.run(consumer('localhost', 4000))
+if __name__ == "__main__":
+    asyncio.run(consumer("localhost", 4000))

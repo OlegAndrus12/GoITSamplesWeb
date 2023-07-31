@@ -12,11 +12,11 @@ class Server:
 
     async def register(self, ws):
         self.clients.add(ws)
-        logging.info(f'{ws.remote_address} connects')
+        logging.info(f"{ws.remote_address} connects")
 
     async def unregister(self, ws):
         self.clients.remove(ws)
-        logging.info(f'{ws.remote_address} disconnects')
+        logging.info(f"{ws.remote_address} disconnects")
 
     async def send_to_clients(self, message: str):
         if self.clients:
@@ -39,8 +39,9 @@ class Server:
 
 async def main():
     server = Server()
-    async with websockets.serve(server.ws_handler, 'localhost', 4000):
+    async with websockets.serve(server.ws_handler, "localhost", 4000):
         await asyncio.Future()  # run forever
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     asyncio.run(main())

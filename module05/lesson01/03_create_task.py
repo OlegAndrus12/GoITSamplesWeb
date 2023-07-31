@@ -8,7 +8,12 @@ fake = Faker()
 
 async def get_user_async(uid: int) -> dict:
     await asyncio.sleep(0.5)
-    return {'id': uid, 'name': fake.name(), 'company': fake.company(), 'email': fake.email()}
+    return {
+        "id": uid,
+        "name": fake.name(),
+        "company": fake.company(),
+        "email": fake.email(),
+    }
 
 
 async def main():
@@ -22,7 +27,7 @@ async def main():
     return user1, user2, user3
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     start = time()
     # loop = asyncio.new_event_loop()
     # asyncio.set_event_loop(loop)
@@ -31,4 +36,3 @@ if __name__ == '__main__':
     print(r)
     print(time() - start)
     # loop.close()
-

@@ -8,5 +8,5 @@ async def producer(message, host, port):
         await ws.send(message)
 
 
-if __name__ == '__main__':
-    asyncio.run(producer(message=sys.argv[1], host='localhost', port=4000))
+if __name__ == "__main__":
+    asyncio.run(producer(message=sys.argv[1], host="localhost", port=4000))
